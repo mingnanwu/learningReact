@@ -9,5 +9,22 @@
 		<div id="app"></div>
 		<script src="bower_components/react/react.js"></script>
 		<script src="bower_components/react/JSXTransformer.js"></script>
+
+		<script type="text/jsx">
+			// add this for jsx
+			var MessageBox = React.createClass({
+				render:function(){
+					return(<h1>hello world</h1>)
+				}
+			}); 
+
+			React.render(<MessageBox/>,
+				document.getElementById('app'),
+				function(){
+					console.lod('fuck')
+				}
+				)
+
+		</script>
 	</body>
 </html>
