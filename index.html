@@ -14,10 +14,16 @@
 			// add this for jsx
 			var MessageBox = React.createClass({
 				render:function(){
+					var submessage = [];
+					for (var i = 0; i < 10; i++) {
+						submessage.push(
+							<Submessage/>
+							)
+					}
 					return(
 						<div>
 							<h1>hello world</h1>
-							<Submessage/>
+							{submessage}
 						</div>
 						)
 				}
