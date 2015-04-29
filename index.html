@@ -13,17 +13,20 @@
 		<script type="text/jsx">
 			// add this for jsx
 			var MessageBox = React.createClass({
+				getInitialState:function(){
+					return{
+						isVisible: true,
+						titleMessage:'coming from state'
+					}
+				},
 				render:function(){
-					var submessage = [];
-					for (var i = 0; i < 10; i++) {
-						submessage.push(
-							<Submessage/>
-							)
+					var styleObj={
+						display: this.state.isVisible ? 'block' : 'none',
 					}
 					return(
 						<div>
-							<h1>hello world</h1>
-							{submessage}
+							<h1 style={styleObj}>{this.state.titleMessage}</h1>
+							<Submessage/>
 						</div>
 						)
 				}
@@ -34,19 +37,14 @@
 					return(
 						<div>
 							<h3>it is the h3 tag</h3>
-							<Footer/>
+							
 						</div>
 					)
 				}
 			});
-			var Footer = React.createClass({
-				render:function(){
-					return(
-						<small>smalltag</small>
-						)
-				}
-			})
-			React.render(<MessageBox/>,
+
+
+			var messageBox = React.render(<MessageBox/>,
 				document.getElementById('app'),
 				function(){
 					console.log('yay')
