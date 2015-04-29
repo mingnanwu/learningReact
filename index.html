@@ -13,18 +13,37 @@
 		<script type="text/jsx">
 			// add this for jsx
 			var MessageBox = React.createClass({
-				alertMe:function(){
-					alert('you clicked me');
-				},
 				render:function(){
-					return(<h1 onClick={this.alertMe}>hello world</h1>)
+					return(
+						<div>
+							<h1>hello world</h1>
+							<Submessage/>
+						</div>
+						)
 				}
-			}); 
+			});
 
+			var Submessage = React.createClass({
+				render:function(){
+					return(
+						<div>
+							<h3>it is the h3 tag</h3>
+							<Footer/>
+						</div>
+					)
+				}
+			});
+			var Footer = React.createClass({
+				render:function(){
+					return(
+						<small>smalltag</small>
+						)
+				}
+			})
 			React.render(<MessageBox/>,
 				document.getElementById('app'),
 				function(){
-					console.lod('yay')
+					console.log('yay')
 				}
 			)
 
