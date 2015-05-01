@@ -60,3 +60,73 @@ p, ul {
 ul {
   padding-left: 30px;
 }
+* {
+  padding:0;
+  margin:0;
+}
+
+html{
+  font:14px normal Arial, sans-serif;
+  color:#626771;
+  background-color:#fff;
+}
+
+body{
+  padding:60px;
+  text-align: center;
+}
+
+ul{
+  list-style:none;
+  display: inline-block;
+}
+
+ul li{
+  display: inline-block;
+  padding: 10px 20px;
+  cursor:pointer;
+  background-color:#eee;
+  color:#7B8585;
+
+  transition:0.3s;
+}
+
+ul li:hover{
+  background-color:#beecea;
+}
+
+ul li.focused{
+  color:#fff;
+  background-color:#41c7c2;
+}
+
+p{
+  padding-top:15px;
+  font-size:12px;
+}
+
+button{
+  background-color:#ed8223;
+  color:#fff;
+  font-family:'Helvetica Neue',sans-serif;
+  font-size:15px;
+  line-height:30px;
+  border-radius:20px;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  border:0;
+  text-shadow:#C17C3A 0 -1px 0;
+  width:120px;
+  height:32px
+}
+
+button:hover{
+  background-color:#beecea;
+}
+
+button.focused{
+  color:#fff;
+  background-color:#41c7c2;
+}
+
+
